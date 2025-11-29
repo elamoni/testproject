@@ -29,6 +29,27 @@ addTask(){
     } else {}
   }//UpdateTask
 
+  editTask(int index){
+    final controller = TextEditingController(text: tasks[index]);
+showDialog(context: context, builder: (context)=>AlertDialog(
+  title: Text('Edit Task'),
+  content: TextField(
+    controller: controller,
+  ),
+  actions: [
+    TextButton(onPressed: (){
+      Navigator.pop(context);
+    }, child: Text('Cancel')),
+    ElevatedButton(onPressed: (){
+    updateTask(controller.text,index);
+    Navigator.pop(context);
+        }, child: Text('Update'))
+          ],
+         ),
+
+    );
+  }//editTask
+
   deleteTask(int index){
   setState(() {
 
@@ -53,8 +74,17 @@ addTask(){
                     labelText: 'Enter Task'
                   ),
                 )),
-                ElevatedButton(onPressed: addTask,
-                    child: Text('Add',style: TextStyle(color: Colors.white),))
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: ElevatedButton(onPressed: addTask,
+                      style: ElevatedButton.styleFrom(
+                        padding: EdgeInsets.symmetric(vertical: 23), // height ↑
+                        minimumSize: Size(100, 0), // width ↑ (200 is example)
+                      ),
+
+                      child: Text('Add',
+                        style: TextStyle(color: Colors.white),)),
+                )
               ],
             ),
           ),//padding
@@ -68,7 +98,9 @@ addTask(){
                     trailing:Row(
                       mainAxisSize: MainAxisSize.min,
                       children: [
-                        IconButton(onPressed: (){}, icon: Icon(Icons.edit)),
+                        IconButton(onPressed: (){
+                          editTask(index);
+                        }, icon: Icon(Icons.edit)),
                         IconButton(onPressed: (){
                           deleteTask(index);
                         }, icon: Icon(Icons.delete)),
