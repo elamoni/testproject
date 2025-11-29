@@ -12,6 +12,7 @@ import 'Module_11/class_2.dart';
 import 'Module_11/class_3.dart';
 import 'Module_11/res.dart';
 import 'Module_11/todo.dart';
+import 'Module_12/class_1.dart';
 import 'Module_8/class_1_input.dart';
 import 'Module_8/class_2.dart';
 import 'Module_8/grid_v.dart';
@@ -49,6 +50,9 @@ class MyApp extends StatelessWidget {
               'res_pakg': (context) => ResPKG(),
               'Class3': (context) => Class3(),
               'Todo': (context) => Todo(),
+              'StateClass': (context) => StateClass(),
+              //'Calculator': (context) => Calculator(),
+              //'APICall': (context) => APICall(),
 
             },
           );
