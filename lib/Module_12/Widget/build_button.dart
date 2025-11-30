@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
 class BuildButton extends StatelessWidget {
-  String text;
-  Color ? color;
+  final String text;
+  final Color ? color;
   final VoidCallback onclick;
 
    BuildButton({
