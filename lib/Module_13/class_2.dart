@@ -9,6 +9,24 @@ class APICall extends StatefulWidget {
 class _APICallState extends State<APICall> {
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Product from API'),
+      ),
+      body: GridView.builder(
+          gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+             crossAxisCount: 3,
+              ),
+          itemCount: 20,
+          itemBuilder: (context,index){
+            return Container(
+              child: Column(
+                children: [
+                  SizedBox(),
+                ],
+              ),
+            );
+          },
+    );
   }
 }
