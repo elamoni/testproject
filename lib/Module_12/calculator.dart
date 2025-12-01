@@ -17,7 +17,7 @@ class _CalculatorState extends State<Calculator> {
   double num1 = 0;
   double num2 = 0;
   void buttonPress(String value){
-    //print('Button pressed $value');
+    print('Button pressed $value');
 
     setState(() {
       if (value == 'C') {
@@ -55,7 +55,7 @@ class _CalculatorState extends State<Calculator> {
         }
         _output = _input;
       }
-      //print(_output);
+      print(_output);
     });
   }
 
