@@ -14,6 +14,7 @@ import 'Module_11/res.dart';
 import 'Module_11/todo.dart';
 import 'Module_12/calculator.dart';
 import 'Module_12/class_1.dart';
+import 'Module_13/class_2.dart';
 import 'Module_8/class_1_input.dart';
 import 'Module_8/class_2.dart';
 import 'Module_8/grid_v.dart';
@@ -37,8 +38,8 @@ class MyApp extends StatelessWidget {
             darkTheme: AppTheme.darkTheme,
             themeMode: ThemeMode.light,
             title: 'Batch-13',
-            home: Calculator(),
-            initialRoute: 'Calculator',
+            home: APICall(),
+            initialRoute: 'APICall',
             routes: {
               'home': (context) => Home(),
              // 'btns': (context) => Buttongrp(),
@@ -53,7 +54,7 @@ class MyApp extends StatelessWidget {
               'Todo': (context) => Todo(),
               'StateClass': (context) => StateClass(),
               'Calculator': (context) => Calculator(),
-              //'APICall': (context) => APICall(),
+              'APICall': (context) => APICall(),
 
             },
           );
